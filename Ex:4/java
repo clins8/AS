@@ -1,0 +1,37 @@
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Linking the xml elements
+        LinearLayout linearLayout = findViewById(R.id.layout);
+        Button btnRed = findViewById(R.id.btnRed);
+        Button btnGreen = findViewById(R.id.btnGreen);
+        Button btnBlue = findViewById(R.id.btnBlue);
+
+        // Change background color when buttons are clicked
+        btnRed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearLayout.setBackgroundColor(Color.RED);
+            }
+        });
+
+        btnGreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearLayout.setBackgroundColor(Color.GREEN);
+            }
+        });
+
+        btnBlue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linearLayout.setBackgroundColor(Color.BLUE);
+            }
+        });
+    }
+}
